@@ -7,17 +7,17 @@ export function Hero() {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full border border-green-200">
-              <Mic className="w-4 h-4" />
-              <span className="text-sm">AI Voice Assistant • Hands-Free Documentation</span>
-            </div>
             
             <div className="space-y-4">
               <h1 className="text-gray-900">
                 Focus on Care. We Handle the Rest.
               </h1>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full border border-green-200">
+                <Mic className="w-4 h-4" />
+                <span className="text-sm">AI Voice Assistant • Hands-Free Documentation</span>
+              </div>
               <p className="text-xl text-gray-600">
-                <span className="text-green-600">DoctorBabu</span> is the all-in-one webapp that streamlines your appointments, records, and billing with a <span className="text-green-600">powerful AI voice assistant</span>, so you can focus entirely on your patients.
+                All in one app to streamline appointments, records with AI voice assistant and much more..
               </p>
             </div>
             
