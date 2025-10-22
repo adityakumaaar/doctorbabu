@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -6,29 +7,29 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
         <div className="flex items-center gap-2">
-          <a href="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
               <span className="text-white">DB</span>
             </div>
             <span className="text-gray-900">DoctorBabu</span>
-          </a>
+          </Link>
         </div>
           
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-8">
-              <a href="/features" className="text-gray-600 hover:text-gray-900 transition-colors">
+              <Link to="/features" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Features
-              </a>
-              <a href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
+              </Link>
+              <Link to="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Pricing
-              </a>
+              </Link>
             </nav>
             <span className="separator"> &nbsp;|&nbsp; </span>
             <Button variant="ghost" className="hidden sm:inline-flex">
               Log In
             </Button>
             <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700" asChild>
-              <a href="/book-demo">Book demo</a>
+              <Link to="/book-demo">Book demo</Link>
             </Button>
           </div>
         </div>

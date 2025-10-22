@@ -2,3 +2,14 @@
   command = "npm run build"
   publish = "dist"
   base = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/account-created"
+  to = "/start-free-trial"
+  status = 302
+  force = true

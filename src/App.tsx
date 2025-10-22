@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Benefits } from "./components/Benefits";
@@ -15,134 +15,107 @@ import { AccountCreatedPage } from "./components/AccountCreatedPage";
 import { PricingPage } from "./components/PricingPage";
 import { FeaturesPage } from "./components/FeaturesPage";
 import { Toaster } from "./components/ui/sonner";
+import { useEffect } from "react";
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+// ScrollToTop component to handle scrolling on route changes
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
-  // Scroll to top whenever the page changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [currentPage]);
+  }, [pathname]);
 
-  useEffect(() => {
-    // Simple client-side routing
-    const path = window.location.pathname;
-    if (path === "/book-demo") {
-      setCurrentPage("book-demo");
-    } else if (path === "/start-free-trial") {
-      setCurrentPage("start-free-trial");
-    } else if (path === "/account-created") {
-      setCurrentPage("account-created");
-    } else if (path === "/pricing") {
-      setCurrentPage("pricing");
-    } else if (path === "/features") {
-      setCurrentPage("features");
-    } else {
-      setCurrentPage("home");
-    }
+  return null;
+}
 
-    // Handle navigation
-    const handlePopState = () => {
-      const newPath = window.location.pathname;
-      if (newPath === "/book-demo") {
-        setCurrentPage("book-demo");
-      } else if (newPath === "/start-free-trial") {
-        setCurrentPage("start-free-trial");
-      } else if (newPath === "/account-created") {
-        setCurrentPage("account-created");
-      } else if (newPath === "/pricing") {
-        setCurrentPage("pricing");
-      } else if (newPath === "/features") {
-        setCurrentPage("features");
-      } else {
-        setCurrentPage("home");
-      }
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    // Intercept link clicks for client-side navigation
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const link = target.closest("a");
-
-      if (link && link.href) {
-        const url = new URL(link.href);
-        if (
-          url.origin === window.location.origin &&
-          (url.pathname === "/" ||
-            url.pathname === "/book-demo" ||
-            url.pathname === "/start-free-trial" ||
-            url.pathname === "/account-created" ||
-            url.pathname === "/pricing" ||
-            url.pathname === "/features")
-        ) {
-          e.preventDefault();
-          window.history.pushState({}, "", url.pathname);
-          handlePopState();
-        }
-      }
-    };
-
-    document.addEventListener("click", handleClick);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-      document.removeEventListener("click", handleClick);
-    };
-  }, []);
-
-  if (currentPage === "book-demo") {
-    return (
-      <>
-        <BookDemoPage />
-        <Toaster />
-      </>
-    );
-  }
-
-  if (currentPage === "start-free-trial") {
-    return <StartFreeTrialPage />;
-  }
-
-  if (currentPage === "account-created") {
-    return <AccountCreatedPage />;
-  }
-
-  if (currentPage === "pricing") {
-    return (
-      <>
-        <Header />
-        <PricingPage />
-        <Footer />
-      </>
-    );
-  }
-
-  if (currentPage === "features") {
-    return (
-      <>
-        <Header />
-        <FeaturesPage />
-        <Footer />
-      </>
-    );
-  }
-
+// Layout component for pages that need header and footer
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main>
-        <Hero />
-        <Benefits />
-        <Clients />
-        <Testimonials />
-        <Features />
-        <Cohorts />
-        <HowItWorks />
-        <CTA />
-      </main>
+      {children}
       <Footer />
     </div>
+  );
+}
+
+// Home page component
+function HomePage() {
+  return (
+    <main>
+      <Hero />
+      <Benefits />
+      <Clients />
+      <Testimonials />
+      <Features />
+      <Cohorts />
+      <HowItWorks />
+      <CTA />
+    </main>
+  );
+}
+
+// Protected route component for AccountCreatedPage
+function ProtectedAccountCreated() {
+  const fromStartFreeTrial = sessionStorage.getItem("fromStartFreeTrial") === "true";
+
+  if (!fromStartFreeTrial) {
+    return <Navigate to="/start-free-trial" replace />;
+  }
+
+  return <AccountCreatedPage />;
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <HomePage />
+            </Layout>
+          }
+        />
+        <Route 
+          path="/book-demo" 
+          element={
+            <>
+              <BookDemoPage />
+              <Toaster />
+            </>
+          } 
+        />
+        <Route
+          path="/start-free-trial"
+          element={
+            <StartFreeTrialPage
+              onSuccess={() => {
+                sessionStorage.setItem("fromStartFreeTrial", "true");
+              }}
+            />
+          }
+        />
+        <Route path="/account-created" element={<ProtectedAccountCreated />} />
+        <Route
+          path="/pricing"
+          element={
+            <Layout>
+              <PricingPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/features"
+          element={
+            <Layout>
+              <FeaturesPage />
+            </Layout>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }

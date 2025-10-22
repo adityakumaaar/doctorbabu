@@ -6,7 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import { Separator } from "./ui/separator";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
-export function StartFreeTrialPage() {
+interface StartFreeTrialPageProps {
+  onSuccess?: () => void;
+}
+
+export function StartFreeTrialPage({ onSuccess }: StartFreeTrialPageProps) {
   const [whatsapp, setWhatsapp] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -15,6 +19,7 @@ export function StartFreeTrialPage() {
     setIsSubmitting(true);
     setTimeout(() => {
       // Redirect to placeholder success page
+      onSuccess?.();
       window.location.href = "/account-created";
     }, 1500);
   };
