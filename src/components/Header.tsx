@@ -20,6 +20,9 @@ export function Header() {
               <Link to="/features" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Features
               </Link>
+              <Link to="/security" className="text-gray-600 hover:text-gray-900 transition-colors">
+                Security
+              </Link>
               <Link to="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Pricing
               </Link>

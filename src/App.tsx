@@ -14,6 +14,7 @@ import { StartFreeTrialPage } from "./components/StartFreeTrialPage";
 import { AccountCreatedPage } from "./components/AccountCreatedPage";
 import { PricingPage } from "./components/PricingPage";
 import { FeaturesPage } from "./components/FeaturesPage";
+import { SecurityPage } from "./components/SecurityPage";
 import { Toaster } from "./components/ui/sonner";
 import { useEffect } from "react";
 
@@ -112,6 +113,14 @@ export default function App() {
           element={
             <Layout>
               <FeaturesPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/security"
+          element={
+            <Layout>
+              <SecurityPage />
             </Layout>
           }
         />
