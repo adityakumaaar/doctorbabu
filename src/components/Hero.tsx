@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Mic, ImageIcon } from "lucide-react";
+import { ArrowRight, Mic } from "lucide-react";
+import heroImg from "../assets/doctor_babu.jpg";
 
 export function Hero() {
   return (
@@ -55,12 +56,13 @@ export function Hero() {
           
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-green-600 to-blue-600 rounded-3xl blur-3xl opacity-20" />
-            {/* Placeholder for hero image/illustration */}
-            <div className="relative aspect-[4/3] bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl shadow-2xl flex items-center justify-center border-2 border-dashed border-green-300">
-              <div className="text-center space-y-2">
-                <ImageIcon className="w-16 h-16 text-green-400 mx-auto" />
-                <p className="text-green-600">Hero Image / Product Screenshot</p>
-              </div>
+            {/* Hero image */}
+            <div className="relative aspect-[4/3] rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-100">
+              <img
+                src={heroImg}
+                alt="DoctorBabu product screenshot"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
