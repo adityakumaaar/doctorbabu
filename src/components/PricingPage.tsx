@@ -7,7 +7,7 @@ import { Check, ArrowRight } from "lucide-react";
 const soloPricing = [
   {
     name: "Basic",
-    price: "₹999",
+    price: "1,299",
     period: "/month",
     description: "Perfect for starting your digital practice",
     features: [
@@ -22,7 +22,7 @@ const soloPricing = [
   },
   {
     name: "Standard",
-    price: "₹2,499",
+    price: "₹1,499",
     period: "/month",
     description: "Most popular for solo practitioners",
     features: [
@@ -39,7 +39,7 @@ const soloPricing = [
   },
   {
     name: "Premium",
-    price: "₹4,999",
+    price: "₹1,999",
     period: "/month",
     description: "For established practices",
     features: [
@@ -59,7 +59,7 @@ const soloPricing = [
 const clinicPricing = [
   {
     name: "Basic",
-    price: "₹4,999",
+    price: "₹3,999",
     period: "/month",
     description: "For small clinics getting started",
     features: [
@@ -74,7 +74,7 @@ const clinicPricing = [
   },
   {
     name: "Standard",
-    price: "₹9,999",
+    price: "₹4,999",
     period: "/month",
     description: "Most popular for growing clinics",
     features: [
