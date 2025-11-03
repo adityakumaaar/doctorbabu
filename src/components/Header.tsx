@@ -16,7 +16,7 @@ export function Header() {
         </div>
           
           <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-8">
               <Link to="/features" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Features
               </Link>
@@ -28,7 +28,7 @@ export function Header() {
               </Link>
             </nav>
             <span className="separator"> &nbsp;|&nbsp; </span>
-            <Button variant="ghost" className="hidden sm:inline-flex">
+            <Button variant="ghost" className="inline-flex">
               Log In
             </Button>
             <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700" asChild>
