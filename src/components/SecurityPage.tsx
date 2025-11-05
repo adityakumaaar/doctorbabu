@@ -8,47 +8,64 @@ export function SecurityPage() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-white opacity-60" />
         <div className="container mx-auto relative">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Shield Icon Visual */}
-            <div className="relative inline-flex">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-400 rounded-full blur-3xl opacity-20 animate-pulse" />
-              <div className="relative w-32 h-32 bg-gradient-to-br from-green-600 to-blue-600 rounded-3xl flex items-center justify-center rotate-6 hover:rotate-0 transition-transform duration-500">
-                <Shield className="w-16 h-16 text-white" strokeWidth={1.5} />
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Left Column: Text Content */}
+            <div className="text-center lg:text-left space-y-8">
+              {/* Shield Icon Visual */}
+              <div className="relative inline-flex">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-400 rounded-full blur-3xl opacity-20 animate-pulse" />
+                <div className="relative w-32 h-32 bg-gradient-to-br from-green-600 to-blue-600 rounded-3xl flex items-center justify-center rotate-6 hover:rotate-0 transition-transform duration-500">
+                  <Shield className="w-16 h-16 text-white" strokeWidth={1.5} />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h1 className="text-gray-900">
+                  Bank-Grade Security for Your Medical Data
+                </h1>
+                <p className="text-xl text-gray-600">
+                  Enterprise-level protection with <span className="text-green-600">Tier IV data centers</span>, end-to-end encryption, and <span className="text-blue-600">99.995% uptime</span> guarantee.
+                </p>
+              </div>
+
+              {/* Key Security Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-4">
+                <div className="text-center lg:text-left">
+                  <div className="text-green-600 mb-2">SSL/TLS 1.3</div>
+                  <div className="text-sm text-gray-600">Encryption</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-blue-600 mb-2">AES-256</div>
+                  <div className="text-sm text-gray-600">At Rest</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-green-600 mb-2">24/7</div>
+                  <div className="text-sm text-gray-600">Monitoring</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700" asChild>
+                  <a href="/start-free-trial">Start Free Trial</a>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <a href="/book-demo">Book demo</a>
+                </Button>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h1 className="text-gray-900">
-                Bank-Grade Security for Your Medical Data
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Enterprise-level protection with <span className="text-green-600">Tier IV data centers</span>, end-to-end encryption, and <span className="text-blue-600">99.995% uptime</span> guarantee.
-              </p>
-            </div>
-
-            {/* Key Security Stats */}
-            <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto pt-8">
-              <div className="text-center">
-                <div className="text-green-600 mb-2">SSL/TLS 1.3</div>
-                <div className="text-sm text-gray-600">Encryption</div>
+            {/* Right Column: Placeholder Image */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-green-600 to-blue-600 rounded-3xl blur-3xl opacity-20" />
+              <div className="relative aspect-[4/3] bg-gradient-to-br from-green-100 via-blue-100 to-green-50 rounded-3xl shadow-2xl flex items-center justify-center border-2 border-dashed border-green-300 overflow-hidden">
+                <div className="text-center space-y-3 p-8">
+                  <div className="w-20 h-20 bg-white/80 rounded-2xl flex items-center justify-center mx-auto">
+                    <Shield className="w-12 h-12 text-green-600" />
+                  </div>
+                  <p className="text-green-700 font-medium">Security Infrastructure Visualization</p>
+                  <p className="text-green-600 text-sm">Protected Data Centers & Encryption</p>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-blue-600 mb-2">AES-256</div>
-                <div className="text-sm text-gray-600">At Rest</div>
-              </div>
-              <div className="text-center">
-                <div className="text-green-600 mb-2">24/7</div>
-                <div className="text-sm text-gray-600">Monitoring</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700" asChild>
-                <a href="/start-free-trial">Start Free Trial</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/book-demo">Book demo</a>
-              </Button>
             </div>
           </div>
         </div>
