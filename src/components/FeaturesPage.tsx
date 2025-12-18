@@ -1,4 +1,4 @@
-import { MessageCircle, FileText, Mic, Calendar, CreditCard, Bot, Clock, Sparkles, Zap, HeartHandshake } from "lucide-react";
+import { MessageCircle, FileText, Mic, Calendar, CreditCard, Bot, Clock, Sparkles, Zap, HeartHandshake, Shield, Users, Check } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function FeaturesPage() {
@@ -22,132 +22,61 @@ export function FeaturesPage() {
         </div>
       </section>
 
-      {/* AI-Powered Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* AI Voice Integration */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #f3e8ff, #ede9fe, #ddd6fe)' }}>
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl flex items-center justify-center">
-              <Bot className="w-6 h-6 text-purple-600" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #9333ea, #7c3aed)' }}>
+              <Mic className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-gray-900">AI-Powered Intelligence</h2>
-              <p className="text-gray-600">Work smarter with intelligent automation</p>
+              <h2 className="text-gray-900">AI Voice Integration</h2>
+              <p style={{ color: '#9333ea' }}>Document consultations hands-free in your local language</p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 space-y-4 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
-                <Mic className="w-8 h-8 text-purple-600" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">AI Voice Integration</h3>
-                <p className="text-sm text-purple-600 font-medium">In Your Local Language</p>
-                <p className="text-gray-600">
-                  Document consultations hands-free using voice commands in your preferred local language. Our AI understands medical terminology and context, making documentation effortless.
-                </p>
-                <ul className="space-y-2 pt-2">
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-purple-600">•</span>
-                    <span>Multi-language support including Hindi, Tamil, Telugu, and more</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-purple-600">•</span>
-                    <span>Real-time transcription with medical vocabulary</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-purple-600">•</span>
-                    <span>Automatic note formatting and structure</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 space-y-4 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
-                <Bot className="w-8 h-8 text-blue-600" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">AI Assistant</h3>
-                <p className="text-sm text-blue-600 font-medium">Your Intelligent Helper</p>
-                <p className="text-gray-600">
-                  Your intelligent helper for documentation, prescription suggestions, and clinical decision support. Let AI handle the routine so you can focus on care.
-                </p>
-                <ul className="space-y-2 pt-2">
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-blue-600">•</span>
-                    <span>Smart prescription recommendations based on patient history</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-blue-600">•</span>
-                    <span>Drug interaction alerts and contraindication warnings</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-blue-600">•</span>
-                    <span>Automated follow-up scheduling suggestions</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Patient Communication Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl flex items-center justify-center">
-              <MessageCircle className="w-6 h-6 text-green-600" />
-            </div>
-            <div>
-              <h2 className="text-gray-900">Patient Communication</h2>
-              <p className="text-gray-600">Stay connected with your patients effortlessly</p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 md:p-12 space-y-6 shadow-lg">
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #9333ea, #7c3aed)' }}>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center">
-                  <MessageCircle className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <Mic className="w-8 h-8 text-white" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-gray-900">WhatsApp Integration</h3>
-                  <p className="text-sm text-green-600 font-medium">Reach Patients Where They Are</p>
-                  <p className="text-gray-600">
-                    Send appointment reminders, share prescriptions, and communicate with patients directly through WhatsApp—the platform they already use every day.
+                  <h3 className="text-white">Speak, Don't Type</h3>
+                  <p className="text-sm font-medium" style={{ color: '#e9d5ff' }}>Multi-Language Medical Transcription</p>
+                  <p style={{ color: '#f3e8ff' }}>
+                    Our AI understands medical terminology and context, making documentation effortless. Speak naturally in your preferred language and watch as your notes are automatically structured and formatted.
                   </p>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <div className="bg-green-50 rounded-xl p-6 space-y-3">
-                  <h4 className="text-gray-900 font-medium">Key Capabilities</h4>
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#581c87' }}>Key Capabilities</h4>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-sm text-gray-600">
-                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs">✓</span>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#9333ea' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
                       </div>
-                      <span>Automated appointment reminders 24 hours before</span>
+                      <span>Multi-language support including Hindi, Tamil, Telugu, and more</span>
                     </li>
-                    <li className="flex items-start gap-3 text-sm text-gray-600">
-                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs">✓</span>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#9333ea' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
                       </div>
-                      <span>Instant prescription sharing with digital signature</span>
+                      <span>Real-time transcription with medical vocabulary recognition</span>
                     </li>
-                    <li className="flex items-start gap-3 text-sm text-gray-600">
-                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs">✓</span>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#9333ea' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
                       </div>
-                      <span>Two-way communication for quick queries</span>
+                      <span>Automatic note formatting and SOAP structure</span>
                     </li>
-                    <li className="flex items-start gap-3 text-sm text-gray-600">
-                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-xs">✓</span>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#9333ea' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
                       </div>
-                      <span>Payment collection links and receipts</span>
+                      <span>Voice-activated prescription dictation</span>
                     </li>
                   </ul>
                 </div>
@@ -157,124 +86,512 @@ export function FeaturesPage() {
         </div>
       </section>
 
-      {/* Clinical Tools Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* AI Assistant */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #dbeafe, #e0e7ff, #c7d2fe)' }}>
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-green-100 rounded-xl flex items-center justify-center">
-              <FileText className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #2563eb, #4f46e5)' }}>
+              <Bot className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-gray-900">Clinical Documentation</h2>
-              <p className="text-gray-600">Professional tools for efficient healthcare delivery</p>
+              <h2 className="text-gray-900">AI Assistant</h2>
+              <p className="text-blue-600">Your intelligent helper for clinical decisions</p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-blue-50 rounded-2xl p-8 space-y-4">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
-                <FileText className="w-8 h-8 text-blue-600" />
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #2563eb, #4338ca)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <Bot className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Clinical Decision Support</h3>
+                  <p className="text-sm font-medium" style={{ color: '#bfdbfe' }}>AI That Works With You</p>
+                  <p style={{ color: '#dbeafe' }}>
+                    Let AI handle the routine so you can focus on care. Get intelligent suggestions for documentation, prescriptions, and follow-ups based on patient history and clinical guidelines.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">Digital Prescriptions</h3>
-                <p className="text-sm text-blue-600 font-medium">Smart & Professional</p>
-                <p className="text-gray-600">
-                  Create digital prescriptions with smart templates, drug interaction checks, and instant sharing with patients.
-                </p>
-                <ul className="space-y-2 pt-2">
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-blue-600">•</span>
-                    <span>Customizable prescription templates</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-blue-600">•</span>
-                    <span>Drug database with dosage guidelines</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-blue-600">•</span>
-                    <span>Digital signature and clinic branding</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="bg-green-50 rounded-2xl p-8 space-y-4">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
-                <FileText className="w-8 h-8 text-green-600" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">Digital Records</h3>
-                <p className="text-sm text-green-600 font-medium">Complete Patient History</p>
-                <p className="text-gray-600">
-                  Secure, searchable patient records with AI-assisted note-taking and instant access to complete medical histories.
-                </p>
-                <ul className="space-y-2 pt-2">
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-green-600">•</span>
-                    <span>Comprehensive medical history at your fingertips</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-green-600">•</span>
-                    <span>Quick search across all patient records</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-green-600">•</span>
-                    <span>Attach reports, images, and test results</span>
-                  </li>
-                </ul>
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#1e3a8a' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#2563eb' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Smart prescription recommendations based on patient history</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#2563eb' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Drug interaction alerts and contraindication warnings</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#2563eb' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Automated follow-up scheduling suggestions</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#2563eb' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Intelligent auto-completion for clinical notes</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Practice Management Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      {/* WhatsApp Integration */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-green-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl flex items-center justify-center">
-              <Calendar className="w-6 h-6 text-orange-600" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg bg-green-600">
+              <MessageCircle className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-gray-900">Practice Management</h2>
-              <p className="text-gray-600">Streamline operations and save time</p>
+              <h2 className="text-gray-900">WhatsApp Integration</h2>
+              <p className="text-green-600">Stay connected with your patients effortlessly</p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 space-y-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center">
-                <Calendar className="w-7 h-7 text-orange-600" />
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #16a34a, #15803d)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Reach Patients Where They Are</h3>
+                  <p className="text-sm font-medium text-green-100">WhatsApp-First Communication</p>
+                  <p className="text-green-50">
+                    Send appointment reminders, share prescriptions, and communicate with patients directly through WhatsApp—the platform they already use every day.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">Smart Scheduling</h3>
-                <p className="text-gray-600 text-sm">
-                  AI-powered appointment booking that eliminates double-bookings and optimizes your daily schedule automatically.
-                </p>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="text-green-700 font-medium">Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Automated appointment reminders 24 hours before</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Instant prescription sharing with digital signature</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Two-way communication for quick patient queries</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Payment collection links and digital receipts</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-white rounded-2xl p-6 space-y-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center">
-                <CreditCard className="w-7 h-7 text-green-600" />
+      {/* Digital Prescriptions */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #cffafe, #e0f2fe, #bae6fd)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #0891b2, #0284c7)' }}>
+              <FileText className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-gray-900">Digital Prescriptions</h2>
+              <p style={{ color: '#0891b2' }}>Smart, professional, and instantly shareable</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0891b2, #0369a1)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Prescribe with Confidence</h3>
+                  <p className="text-sm font-medium" style={{ color: '#a5f3fc' }}>Smart Templates & Safety Checks</p>
+                  <p style={{ color: '#cffafe' }}>
+                    Create digital prescriptions with smart templates, drug interaction checks, and instant sharing with patients. Professional-looking prescriptions with your clinic branding.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">Automated Billing</h3>
-                <p className="text-gray-600 text-sm">
-                  Streamlined invoicing and payment processing with insurance claim management built right in.
-                </p>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#155e75' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0891b2' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Customizable prescription templates for common conditions</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0891b2' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Comprehensive drug database with dosage guidelines</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0891b2' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Digital signature and personalized clinic branding</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0891b2' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>One-click sharing via WhatsApp or email</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-white rounded-2xl p-6 space-y-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
-                <Clock className="w-7 h-7 text-blue-600" />
+      {/* Digital Records */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #ccfbf1, #d1fae5, #a7f3d0)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #0d9488, #059669)' }}>
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-gray-900">Digital Patient Records</h2>
+              <p style={{ color: '#0d9488' }}>Complete medical history at your fingertips</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #0d9488, #047857)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Know Your Patients Better</h3>
+                  <p className="text-sm font-medium" style={{ color: '#99f6e4' }}>Comprehensive EMR System</p>
+                  <p style={{ color: '#ccfbf1' }}>
+                    Secure, searchable patient records with AI-assisted note-taking and instant access to complete medical histories. Never lose a patient's information again.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-900">Save 10+ Hours Weekly</h3>
-                <p className="text-gray-600 text-sm">
-                  Automate repetitive tasks and paperwork, giving you more time with patients and less with admin work.
-                </p>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#134e4a' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0d9488' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Complete medical history accessible in seconds</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0d9488' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Quick search across all patient records</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0d9488' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Attach reports, images, and test results</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#0d9488' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Timeline view of all patient visits and treatments</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Scheduling */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #ffedd5, #fed7aa, #fef3c7)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #ea580c, #d97706)' }}>
+              <Calendar className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-gray-900">Smart Scheduling</h2>
+              <p style={{ color: '#ea580c' }}>AI-powered appointment management</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #ea580c, #c2410c)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <Calendar className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Never Double-Book Again</h3>
+                  <p className="text-sm font-medium" style={{ color: '#fed7aa' }}>Intelligent Calendar Management</p>
+                  <p style={{ color: '#ffedd5' }}>
+                    AI-powered appointment booking that eliminates double-bookings and optimizes your daily schedule automatically. Reduce no-shows and maximize your time.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#7c2d12' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#ea580c' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Smart conflict detection prevents double-bookings</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#ea580c' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Automated reminder system reduces no-shows by 70%</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#ea580c' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Online booking for patients available 24/7</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#ea580c' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Waitlist management for cancelled appointments</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automated Billing */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #d1fae5, #a7f3d0, #bbf7d0)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #059669, #16a34a)' }}>
+              <CreditCard className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-gray-900">Automated Billing</h2>
+              <p style={{ color: '#059669' }}>Streamlined invoicing and payment collection</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #059669, #047857)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <CreditCard className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Get Paid Faster</h3>
+                  <p className="text-sm font-medium" style={{ color: '#a7f3d0' }}>Hassle-Free Payment Processing</p>
+                  <p style={{ color: '#d1fae5' }}>
+                    Streamlined invoicing and payment processing with multiple payment options. Send payment links, track outstanding dues, and manage your revenue effortlessly.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#064e3b' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#059669' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>One-click invoice generation after consultations</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#059669' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>UPI, card, and net banking payment acceptance</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#059669' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Automatic payment reminders for outstanding dues</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#059669' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Revenue analytics and financial reports</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Time Savings */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #e0e7ff, #c7d2fe, #ddd6fe)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #4f46e5, #7c3aed)' }}>
+              <Clock className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-gray-900">Save 10+ Hours Weekly</h2>
+              <p style={{ color: '#4f46e5' }}>Automate repetitive tasks and paperwork</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #4f46e5, #6d28d9)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">More Time for Patients</h3>
+                  <p className="text-sm font-medium" style={{ color: '#c7d2fe' }}>Less Admin, More Care</p>
+                  <p style={{ color: '#e0e7ff' }}>
+                    Automate repetitive tasks and paperwork, giving you more time with patients and less with administrative work. Focus on what matters most—providing excellent care.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#312e81' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#4f46e5' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Auto-generated consultation summaries</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#4f46e5' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Batch processing for routine communications</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#4f46e5' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>One-click report generation for compliance</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#4f46e5' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Smart templates for common workflows</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(to bottom right, #f1f5f9, #e2e8f0, #cbd5e1)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(to bottom right, #475569, #334155)' }}>
+              <Shield className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-gray-900">Security & Compliance</h2>
+              <p style={{ color: '#475569' }}>Enterprise-grade protection for patient data</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-8 md:p-12 space-y-6 shadow-xl" style={{ background: 'linear-gradient(to bottom right, #475569, #1e293b)' }}>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-white">Your Data is Safe</h3>
+                  <p className="text-sm font-medium" style={{ color: '#cbd5e1' }}>HIPAA-Ready Infrastructure</p>
+                  <p style={{ color: '#e2e8f0' }}>
+                    Built with healthcare compliance in mind. Your patient data is encrypted, secured, and protected with industry-leading security measures.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-6 space-y-3">
+                  <h4 className="font-medium" style={{ color: '#0f172a' }}>Key Capabilities</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#475569' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>End-to-end encryption for all patient data</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#475569' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Regular automated backups with disaster recovery</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#475569' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Role-based access control for staff</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-gray-700">
+                      <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#475569' }}>
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <span>Comprehensive audit logs for compliance</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -294,7 +611,7 @@ export function FeaturesPage() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Mic className="w-6 h-6 text-white" />
@@ -308,7 +625,7 @@ export function FeaturesPage() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <MessageCircle className="w-6 h-6 text-white" />
@@ -322,7 +639,7 @@ export function FeaturesPage() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Zap className="w-6 h-6 text-white" />
@@ -336,7 +653,7 @@ export function FeaturesPage() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 space-y-4 hover:bg-white/20 transition-colors">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <HeartHandshake className="w-6 h-6 text-white" />
